@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Portofolio - Muhamad Fajar Sidik</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+header h1 { margin: 20px 0 10px; font-size: 2.5em; animation: slideDown 1.5s ease-in-out; }
+header p { font-size: 1.1em; animation: slideUp 1.5s ease-in-out; }
+
+nav {
+    position: sticky;
+    top: 0;
+    background: #34495e;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 100;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover { color: #f39c12; }
+
+section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+h2 { text-align: center; margin-bottom: 30px; font-size: 2em; color: #2c3e50; }
+
+.skills, .experience, .portfolio, .contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+
+.card {
+    background: #fff; padding: 20px; border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 250px; text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+.card img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; cursor: pointer; }
+
+/* Tentang Saya rapi */
+#tentang { max-width: 800px; margin: auto; line-height: 1.7; font-size: 16px; color: #333; }
+#tentang p { margin-bottom: 20px; text-align: justify; }
+
+/* Animations */
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes slideDown { from {transform: translateY(-50px); opacity:0;} to {transform: translateY(0); opacity:1;} }
+@keyframes slideUp { from {transform: translateY(50px); opacity:0;} to {transform: translateY(0); opacity:1;} }
+
+/* Lightbox */
+#lightbox {
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.8); display:none; justify-content:center; align-items:center;
+    z-index: 200;
+}
+#lightbox img { max-width: 90%; max-height: 80%; border-radius: 12px; }
+#lightbox span { position:absolute; top:20px; right:30px; font-size:2em; color:#fff; cursor:pointer; }
+
+footer { text-align:center; padding:20px; background:#2c3e50; color:#fff; }
+
+/* Scroll animation */
+.animate { opacity:0; transform: translateY(50px); transition: all 0.8s ease-out; }
+.animate.visible { opacity:1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="images/profil.jpg" alt="Foto Profil">
+    <h1>Muhamad Fajar Sidik</h1>
+    <p>CV & Portofolio Profesional</p>
+</header>
+
+<nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#keahlian">Keahlian</a>
+    <a href="#portofolio">Portofolio</a>
+    <a href="#kontak">Kontak</a>
+</nav>
+
+<section id="tentang" class="animate">
+    <h2>Tentang Saya</h2>
+    <p>Saya merupakan lulusan <strong>SMK Muhammadiyah Lemahabang</strong>, jurusan <strong>Teknik Komputer dan Jaringan</strong>. Memiliki pengalaman <strong>Praktek Kerja Lapangan (PKL)</strong> di <strong>Internet Keluarga Cabang Cirebon Timur</strong> sebagai teknisi, di mana saya aktif memperbaiki masalah jaringan klien, melakukan instalasi, dan konfigurasi perangkat Mikrotik.</p>
+
+    <p>Saya juga telah mengikuti <strong>sertifikasi MTCNA</strong>. Dengan pengalaman sebagai <strong>Teknisi Lapangan</strong> di bidang <strong>Mikrotik, FTTH, dan CCTV</strong>, saya berkomitmen untuk memberikan solusi terbaik dalam instalasi dan perbaikan jaringan.</p>
+
+    <p>Selain itu, saya terbuka untuk mendapatkan pengalaman lain di bidang <strong>IT Support</strong> maupun <strong>Network Engineer</strong>, untuk mengembangkan kompetensi dan memberikan kontribusi maksimal di perusahaan.</p>
+</section>
+
+<section id="keahlian" class="animate">
+    <h2>Keahlian</h2>
+    <div class="skills">
+        <div class="card">Mikrotik</div>
+        <div class="card">FTTH</div>
+        <div class="card">CCTV</div>
+    </div>
+</section>
+
+<section id="portofolio" class="animate">
+    <h2>Portofolio</h2>
+    <div class="portfolio">
+        <div class="card"><img src="images/cctv.jpg" alt="CCTV"></div>
+        <div class="card"><img src="images/ftth.jpg" alt="FTTH"></div>
+        <div class="card"><img src="images/service.jpg" alt="Service"></div>
+        <div class="card"><img src="images/instalulang.jpg" alt="Instal Ulang"></div>
+        <div class="card"><img src="images/mtcna.jpg" alt="MTCNA"></div>
+    </div>
+</section>
+
+<section id="kontak" class="animate">
+    <h2>Kontak</h2>
+    <div class="contact">
+        <div class="card">
+            <p>Telp / WA: 0895421100204</p>
+            <p>Email: <a href="mailto:fajarsidik.5.6.30@gmail.com">fajarsidik.5.6.30@gmail.com</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>&copy; 2025 Muhamad Fajar Sidik</footer>
+
+<!-- Lightbox -->
+<div id="lightbox">
+    <span onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Foto Portofolio">
+</div>
+
+<script>
+// Lightbox
+const images = document.querySelectorAll('.portfolio img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
+function closeLightbox() { lightbox.style.display = 'none'; }
+
+// Scroll animation
+const animElements = document.querySelectorAll('.animate');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.2 });
+animElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
